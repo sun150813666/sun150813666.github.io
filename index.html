@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 公共样式 */
+.xianshi,
+.xianshi1,
+.xianshi3 {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    min-width: 800rpx;
+    min-height: 100rpx;
+    font-size: 64rpx;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+.data,
+.data1,
+.data-jisusn {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.row-container1,
+.row-container2,
+.dingjiao-one,
+.dingjiao-two,
+.dingjiao-three,
+.dingjiao-four,
+.dingjiao-five,
+.row-container11,
+.row-container21,
+.pianxiangjiao-one1,
+.pianxiangjiao-two1,
+.pianxiangjiao-three1,
+.pianxiangjiao-four1,
+.pianxiangjiao-five1,
+.rom {
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+    
+}
+
+.row-one,
+.row-two,
+.row-three,
+.row-one1,
+.row-two1,
+.row-three1 {
+    flex: 1;
+        /* 均分水平空间 */
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        text-align: center;
+}
+
+.row-zero,
+.row-four,
+.row-five,
+.row-six,
+.row-seven,
+.row-zero1,
+.row-four1,
+.row-five1,
+.row-six1,
+.row-seven1 { 
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.diyihang-one-one,
+.diyihang-one-one1,
+.diyihang-one-one2,
+.diyihang-one-one3,
+.diyihang-one-one4,
+.diyihang-two-one,
+.diyihang-two-one1,
+.diyihang-two-one2,
+.diyihang-two-one3,
+.diyihang-two-one4,
+.diyihang-three-one,
+.diyihang-three-one1,
+.diyihang-three-one2,
+.diyihang-three-one3,
+.diyihang-three-one4,
+.diyihang-four-one,
+.diyihang-four-one1,
+.diyihang-four-one2,
+.diyihang-four-one3,
+.diyihang-four-one4,
+.diyihang-five-one,
+.diyihang-five-one1,
+.diyihang-five-one2,
+.diyihang-five-one3,
+.diyihang-five-one4,
+.diyihang-one-one,
+.diyihang-one-one1,
+.diyihang-one-one2,
+.diyihang-one-one3,
+.diyihang-one-one4,
+.diyihang-two-one,
+.diyihang-two-one1,
+.diyihang-two-one2,
+.diyihang-two-one3,
+.diyihang-two-one4,
+.diyihang-three-one,
+.diyihang-three-one1,
+.diyihang-three-one2,
+.diyihang-three-one3,
+.diyihang-three-one4,
+.diyihang-four-one,
+.diyihang-four-one1,
+.diyihang-four-one2,
+.diyihang-four-one3,
+.diyihang-four-one4,
+.diyihang-five-one,
+.diyihang-five-one1,
+.diyihang-five-one2,
+.diyihang-five-one3,
+.diyihang-five-one4
+input[type="number"],
+input[type="digit"] {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+    
+}
+
+
+
+/* 设置输入框的样式 */
+input[type="number"],
+input[type="digit"] {
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    width: 240px;
+    height: 18px;
+    text-align: center;
+    border: 1px solid transparent;
+} 
+
+
+
+/* 设置按钮元素的样式 */
+
+.rom1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+/* 按钮样式 */
+.data-jisuan,
+.data-clear,
+.data-lishi,
+.data-jisuan1,
+.data-clear1,
+.data-lishi1 {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.data-jisuan, 
+.data-jisuan1,
+.data-clear,
+.data-clear1:hover,
+.data-lishi,
+.data-lishi1:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.data-jisuan:hover,
+.data-jisuan1:hover,
+.data-clear:hover,
+.data-clear1,
+.data-lishi:hover,
+.data-lishi1 {
+    background-color: #0056b3;
+}
+
+.data-clear,
+.data-clear1 {
+    background-color: #28a745;
+}
+
+.data-clear:hover,
+.data-clear1:hover {
+    background-color: #1e7e34;
+}
+
+/* 特定样式 */
+.row-one,
+.row-two,
+.row-three,
+.row-one1,
+.row-two1,
+.row-three1 {
+    background-color: #e2ecf3;
+}
+
+.row-zero,
+.row-four,
+.row-five,
+.row-six,
+.row-seven,
+.row-zero1,
+.row-four1,
+.row-five1,
+.row-six1,
+.row-seven1 {
+    background-color: #dce9f9;
+}
+
+.diyihang-one-one,
+.dingjiao-one input,
+.pianxiangjiao-one1 input {
+    background-color: #cee1f2;
+}
+
+.diyihang-two-one,
+.dingjiao-two input,
+.pianxiangjiao-two1 input {
+    background-color: #bed8f3;
+}
+
+.diyihang-three-one,
+.dingjiao-three input,
+.pianxiangjiao-three1 input,
+.input-container input {
+    background-color: #adcce9;
+}
+
+.diyihang-four-one,
+.dingjiao-four input,
+.pianxiangjiao-four1 input {
+    background-color: #90cbf9;
+}
+
+.diyihang-five-one,
+.dingjiao-five input,
+.pianxiangjiao-five1 input {
+    background-color: #64b7f6;
+}
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="xianshi">顶角A: <span id="A"></span></div>
+    <div class="data">
+        <div class="geshi"> 数据格式 :120º2'写作120.02</div>
+        <div class="row-container1">
+            <div class="row-one">\</div>
+            <div class="row-two">位置1</div>
+            <div class="row-three">位置2</div>
+        </div>
+        <div class="row-container2">
+            <div class="row-zero">次数</div>
+            <div class="row-four">θ左₁</div>
+            <div class="row-five">θ右₁</div>
+            <div class="row-six">θ左₂</div>
+            <div class="row-seven">θ右₂</div>
+        </div>
+        <div class="dingjiao-one">
+            <div class="diyihang-one-one">1</div>
+            <div class="diyihang-one-one1"><input bindinput="getInputValue1" name="data11" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-one-one2"><input bindinput="getInputValue2" name="data12" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-one-one3"><input bindinput="getInputValue3" name="data13" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-one-one4"><input bindinput="getInputValue4" name="data14" placeholder="请输入数据"
+                    type="digit" value=""></div>
+        </div>
+        <div class="dingjiao-two">
+            <div class="diyihang-two-one">2</div>
+            <div class="diyihang-two-one1"><input bindinput="getInputValue5" name="data21" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-two-one2"><input bindinput="getInputValue6" name="data22" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-two-one3"><input bindinput="getInputValue7" name="data23" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-two-one4"><input bindinput="getInputValue8" name="data24" placeholder="请输入数据"
+                    type="digit" value=""></div>
+        </div>
+        <div class="dingjiao-three">
+            <div class="diyihang-three-one">3</div>
+            <div class="diyihang-three-one1"><input bindinput="getInputValue9" name="data31" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-three-one2"><input bindinput="getInputValue10" name="data32" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-three-one3"><input bindinput="getInputValue11" name="data33" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-three-one4"><input bindinput="getInputValue12" name="data34" placeholder="请输入数据"
+                    type="digit" value=""></div>
+        </div>
+        <div class="dingjiao-four">
+            <div class="diyihang-four-one">4</div>
+            <div class="diyihang-four-one1"><input bindinput="getInputValue13" name="data41" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-four-one2"><input bindinput="getInputValue14" name="data42" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-four-one3"><input bindinput="getInputValue15" name="data43" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-four-one4"><input bindinput="getInputValue16" name="data44" placeholder="请输入数据"
+                    type="digit" value=""></div>
+        </div>
+        <div class="dingjiao-five">
+            <div class="diyihang-five-one">5</div>
+            <div class="diyihang-five-one1"><input bindinput="getInputValue17" name="data51" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-five-one2"><input bindinput="getInputValue18" name="data52" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-five-one3"><input bindinput="getInputValue19" name="data53" placeholder="请输入数据"
+                    type="digit" value=""></div>
+            <div class="diyihang-five-one4"><input bindinput="getInputValue20" name="data54" placeholder="请输入数据"
+                    type="digit" value=""></div>
+        </div>
+    </div>
+
+
+    <div class="xianshi1">最小偏向角δ=<span id="B"></span></div>
+    <div class="data1">
+        <div class="geshi">数据格式:180º25'写作180.25</div>
+        <div class="row-container11">
+            <div class="row-one1">\</div>
+            <div class="row-two1">入射光</div>
+            <div class="row-three1">出射光</div>
+        </div>
+        <div class="row-container21">
+            <div class="row-zero1">次数</div>
+            <div class="row-four1">左游标</div>
+            <div class="row-five1">右游标</div>
+            <div class="row-six1">左游标</div>
+            <div class="row-seven1">右游标</div>
+        </div>
+        <div class="pianxiangjiao-one1">
+            <div class="diyihang-one-one">1</div>
+            <div class="diyihang-one-one1"><input bindinput="getInputValue1" name="data110" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-one-one2"><input bindinput="getInputValue2" name="data120" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-one-one3"><input bindinput="getInputValue3" name="data130" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-one-one4"><input bindinput="getInputValue4" name="data140" placeholder="请输入数据"
+                    type="number" value=""></div>
+        </div>
+        <div class="pianxiangjiao-two1">
+            <div class="diyihang-two-one">2</div>
+            <div class="diyihang-two-one1"><input bindinput="getInputValue5" name="data210" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-two-one2"><input bindinput="getInputValue6" name="data220" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-two-one3"><input bindinput="getInputValue7" name="data230" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-two-one4"><input bindinput="getInputValue8" name="data240" placeholder="请输入数据"
+                    type="number" value=""></div>
+        </div>
+        <div class="pianxiangjiao-three1">
+            <div class="diyihang-three-one">3</div>
+            <div class="diyihang-three-one1"><input bindinput="getInputValue9" name="data310" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-three-one2"><input bindinput="getInputValue10" name="data320" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-three-one3"><input bindinput="getInputValue11" name="data330" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-three-one4"><input bindinput="getInputValue12" name="data340" placeholder="请输入数据"
+                    type="number" value=""></div>
+        </div>
+        <div class="pianxiangjiao-four1">
+            <div class="diyihang-four-one">4</div>
+            <div class="diyihang-four-one1"><input bindinput="getInputValue13" name="data410" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-four-one2"><input bindinput="getInputValue14" name="data420" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-four-one3"><input bindinput="getInputValue15" name="data430" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-four-one4"><input bindinput="getInputValue16" name="data440" placeholder="请输入数据"
+                    type="number" value=""></div>
+        </div>
+        <div class="pianxiangjiao-five1">
+            <div class="diyihang-five-one">5</div>
+            <div class="diyihang-five-one1"><input bindinput="getInputValue17" name="data510" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-five-one2"><input bindinput="getInputValue18" name="data520" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-five-one3"><input bindinput="getInputValue19" name="data530" placeholder="请输入数据"
+                    type="number" value=""></div>
+            <div class="diyihang-five-one4"><input bindinput="getInputValue20" name="data540" placeholder="请输入数据"
+                    type="number" value=""></div>
+        </div>
+    </div>
+
+
+
+
+    <div class="xianshi3">折射率n: <span id="resultN"></span></div>
+    <div class="data-jisusn">
+        <div class="dingjiaoshuru">输入顶角:</div>
+        <div class="input-container">
+            <input id="inputTopAngle" placeholder="请输入数据" type="number">
+        </div>
+        <div class="pianxiangjiaoshuru">输入偏向角:</div>
+        <div class="input-container">
+            <input id="inputMinDeviationAngle" placeholder="请输入数据" type="number">
+        </div>
+    </div>
+
+    <div class="rom">
+        <!-- 计算和清零按钮 -->
+        <div onclick="all_count()" class="data-jisuan" data-value="{{valuejisuan}}" id="{{item.id.jiusan}}">
+            计算
+        </div>
+        <div onclick="tapclear()" class="data-clear" data-value="{{valueclear}}" id="{{item.id.clear}}">
+            清零
+        </div>
+    </div>
+
+
+</body>
+<script>
+    // 计算顶角
+        function calculateVertexAngle() {
+            const vertexAngles = [];
+
+            // 提取前五组顶角数据
+            for (let i = 1; i <= 5; i++) {
+                const thetaLeft1 = parseFloat(document.getElementsByName(`data${i}1`)[0].value);
+                const thetaLeft2 = parseFloat(document.getElementsByName(`data${i}3`)[0].value);
+                const thetaRight1 = parseFloat(document.getElementsByName(`data${i}2`)[0].value);
+                const thetaRight2 = parseFloat(document.getElementsByName(`data${i}4`)[0].value);
+
+                if (!isNaN(thetaLeft1) && !isNaN(thetaLeft2) && !isNaN(thetaRight1) && !isNaN(thetaRight2)) {
+                    const vertexAngle = Math.abs(0.25 * ((thetaLeft1 - thetaLeft2) + (thetaRight1 - thetaRight2)));
+                    vertexAngles.push(vertexAngle);
+                }
+            }
+
+            // 计算顶角的平均值
+            if (vertexAngles.length > 0) {
+                const averageVertexAngle = vertexAngles.reduce((sum, angle) => sum + angle, 0) / vertexAngles.length;
+                document.getElementById('A').textContent = averageVertexAngle.toFixed(2);
+            } else {
+                document.getElementById('A').textContent = 'N/A';
+            }
+        }
+
+        // 计算偏向角
+        function calculateDeviationAngle() {
+            const deviationAngles = [];
+
+            // 提取后五组偏向角数据
+            for (let i = 1; i <= 5; i++) {
+                console.log(i);
+                const leftGame1 = parseFloat(document.getElementsByName(`data${i}10`)[0].value);
+                const leftGame2 = parseFloat(document.getElementsByName(`data${i}30`)[0].value);
+                const rightGame1 = parseFloat(document.getElementsByName(`data${i}20`)[0].value);
+                const rightGame2 = parseFloat(document.getElementsByName(`data${i}40`)[0].value);
+
+                if (!isNaN(leftGame1) && !isNaN(leftGame2) && !isNaN(rightGame1) && !isNaN(rightGame2)) {
+                    const deviationAngle = Math.abs(0.25 * ((leftGame1 - leftGame2) + (rightGame1 - rightGame2)));
+                    deviationAngles.push(deviationAngle);
+                }
+            }
+
+            // 计算偏向角的平均值
+            if (deviationAngles.length > 0) {
+                const averageDeviationAngle = deviationAngles.reduce((sum, angle) => sum + angle, 0) / deviationAngles.length;
+                document.getElementById('B').textContent = averageDeviationAngle.toFixed(2);
+            } else {
+                document.getElementById('B').textContent = 'N/A';
+            }
+        }
+
+        // 计算折射率n
+        function calculateRefractiveIndex() {
+            const inputTopAngle = parseFloat(document.getElementById('inputTopAngle').value);
+            const inputMinDeviationAngle = parseFloat(document.getElementById('inputMinDeviationAngle').value);
+
+            if (!isNaN(inputTopAngle) && !isNaN(inputMinDeviationAngle)) {
+                const n = Math.sin(0.5 * (inputMinDeviationAngle) + parseFloat(inputTopAngle)) / Math.sin(0.5 * inputTopAngle);
+                document.getElementById('resultN').textContent = n.toFixed(2);
+            } else {
+                alert('请输入有效的数字！');
+            }
+        }
+
+        //点击事件
+        function all_count() {
+            calculateVertexAngle();
+            calculateDeviationAngle();
+            calculateRefractiveIndex();
+        }
+
+
+        function tapclear() {
+            let input_arr = document.getElementsByTagName('input');
+            console.log(input_arr)
+            for (let i = 0; i < input_arr.length; i++) {
+                input_arr[i].value = '';
+            }
+        }
+</script>
+
+</html>
